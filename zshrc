@@ -1,3 +1,6 @@
+if [ "$TMUX" = ""  ]; then
+  tmux -2 attach || tmux -2;
+fi
 # Path to your oh-my-zsh installation.
 export ZSH=/home/pierre/.oh-my-zsh
 
@@ -108,6 +111,5 @@ export EDITOR="vim"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias tmux="TERM=screen-256color tmux"
-
+alias tmux="TERM=screen-256color tmux -2"
 plugins=(themes zsh-completions)
